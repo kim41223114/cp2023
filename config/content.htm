@@ -1,10 +1,24 @@
+<p></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"></pre>
 <h1>First</h1>
 <p><br/><br/>About</p>
-<p><a href="https://github.com/mdecycu/cmsite"> https://github.com/kim41223114/cp2023</a> (倉儲)</p>
+<p><a href="https://github.com/mdecycu/cmsite"> https://github.com/kim41223114/cp2023</a> (倉儲)<br/><br/></p>
+<h1>W3</h1>
+<pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">以下為開啟筆記編輯網站之程式:
+# cmsite
+cmsimde template uses mdecycu/cmsimde as submodule
+
+On Replit:
+
+for cmsite: git submodule update --init --recursive 
+
+for cmsimde_site: cmsimde is as directory not submodule
+
+for cmsimde: pip install flask flask_cors bs4 lxml pelican markdown gevent</pre>
+<h4><img alt="" height="302" src="/images/螢幕擷取畫面 (195).png" width="537"/></h4>
 <h1>w6</h1>
 <p></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+<pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 #include &lt;gd.h&gt;
 #include &lt;math.h&gt;
 
@@ -132,8 +146,21 @@ int main() {
 
     return 0;
 }</pre>
-<p><br/><img alt="" height="203" src="/images/gnuplot_ex1.png" width="406"/></p>
-<p></p>
+<pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">三角函數波形圖程式:{ pkgs }: {
+    deps = [
+      pkgs.libev
+      pkgs.gnuplot
+      pkgs.ncurses.dev
+      pkgs.gd
+    ];
+  env = {
+    PYTHON_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+      pkgs.libev
+    ];
+  };
+}</pre>
+<p><br/><br/><img alt="" height="203" src="/images/gnuplot_ex1.png" width="406"/></p>
+<p><img alt="" height="224" src="/images/螢幕擷取畫面 (196).png" width="398"/></p>
 <h1>W9(嘗試遠端連結S1511)</h1>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">以下是使用遠端IPV6的連結練習
 Microsoft Windows [版本 10.0.22621.2428]
@@ -358,7 +385,7 @@ Connection closed
 <h1>W11(使用瀏覽器開啟國旗檔)</h1>
 <p><img alt="" height="266" src="/images/螢幕擷取畫面 (81).png" width="473"/></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">目前成功使用shells開啟C語言</pre>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">並使用瀏覽器檢視其檔案</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">並使用瀏覽器檢視其檔案(hello gd)</pre>
 <p><img alt="" height="265" src="/images/螢幕擷取畫面 (84).png" width="472"/></p>
 <p></p>
 <h1>W13(開啟github倉儲)</h1>
@@ -369,6 +396,42 @@ Connection closed
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">心得:
        這些課程學習到的東西對於我來說相當新鮮，但正因為這些內容實在是太新鮮了，以至於我在學習的過程中常常只懂得依樣畫葫蘆，但即使如此，我還是嘗試好多次，才有了以上的成果，但我希望上課內容可以先和學員普及其中運作的原理，預留較多的時間才能真正學習好內容。</pre>
 <h1>putty使用</h1>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">步驟1:使用puttygen.exe定位主機位置並獲得key(點擊Generate開始定位)
+
+如圖:(鼠標需在其檔案頁面範圍內不斷移動直到綠條跑完)
+
+
+
+
+
+
+</pre>
+<p><img alt="" height="371" src="/images/putty step1.png" width="530"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">將key(圖上藍色框選的亂碼)複製新增到自己倉儲帳號(設定-SSH keys)，同時也要點圖上的Save private key
+
+儲存到tinyc-data-home(名稱學號)
+
+貼至倉儲綁定的亂碼就是自己設的鎖，而鑰匙就是儲存至自己的USB中的.ppk檔</pre>
+<p></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">步驟2:使用putty.exe把要鑰匙與倉儲座連接</pre>
+<p><img alt="" height="321" src="/images/putty step2.png" width="393"/></p>
+<p></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">至SSH裡的Auth裡的Credentials，將.ppk檔數入
+
+</pre>
+<p></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">步驟3:在命令字元打上reedit，尋找到剛剛處存的key整個目錄檔後右鍵匯出至USB中</pre>
+<p><img alt="" height="209" src="/images/putty step3.png" width="273"/></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">字元指令至(cd)自己要克隆抓取後放置的位置
+
+輸入git clone --recurse-submodules git@41223114:zhe41223114/cp2023.git
+
+(上述粗體字前者為.ppk檔案名:後者為倉儲帳號)
+
+將倉儲資料複製到USB，之後cd進cp2023(克隆下的資料檔名)
+
+輸入cms 就可開啟近端網站進行維護了</pre>
+<p><br/><br/></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">目前已使用putty將鎖頭與鎖設定完成(ppk檔案)</pre>
 <p><img alt="" height="272" src="/images/螢幕擷取畫面 (156).png" width="484"/></p>
 <h1>Brython</h1>
