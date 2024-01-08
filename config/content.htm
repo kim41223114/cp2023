@@ -592,6 +592,69 @@ Connection closed
 <p><br/><br/></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">目前已使用putty將鎖頭與鎖設定完成(ppk檔案)</pre>
 <p><img alt="" height="272" src="/images/螢幕擷取畫面 (156).png" width="484"/></p>
+<h1>W15</h1>
+<h2>Q1 </h2>
+<p>ANS:</p>
+<p></p>
+<pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+#include &lt;gd.h&gt;
+#include &lt;math.h&gt;
+
+void draw_roc_flag(gdImagePtr img);
+
+int main() {
+    int width = 1200;
+    int height = (int)(width * 2.0 / 3.0);
+
+    gdImagePtr img = gdImageCreateTrueColor(width, height);
+    gdImageAlphaBlending(img, 0);
+
+    draw_roc_flag(img);
+
+    FILE *outputFile = fopen("roc_flag.png", "wb");
+    if (outputFile == NULL) {
+        fprintf(stderr, "Error opening the output file.\n");
+        return 1;
+    }
+    gdImagePngEx(img, outputFile, 9);
+    fclose(outputFile);
+    gdImageDestroy(img);
+    return 0;
+}
+
+void draw_roc_flag(gdImagePtr img) {
+    int width = gdImageSX(img);
+    int height = gdImageSY(img);
+    int red, white, blue;
+    int center_x = (int)(width / 4);
+    int center_y = (int)(height / 4);
+
+    red = gdImageColorAllocate(img, 255, 0, 0);
+    white = gdImageColorAllocate(img, 255, 255, 255);
+    blue = gdImageColorAllocate(img, 0, 0, 149);
+
+    gdImageFilledRectangle(img, 0, 0, width, height, red);
+    gdImageFilledRectangle(img, 0, 0, (int)(width / 2.0), (int)(height / 2.0), blue);
+
+    int A_x = 429;
+    int A_y = 125;
+    int B_x = 279;
+    int B_y = 165;
+    int E_x = 170;
+    int E_y = 274;
+    int D_x = 319;
+    int D_y = 234;
+
+    gdImageLine(img, A_x, A_y, B_x, B_y, white);
+    gdImageLine(img, B_x, B_y, E_x, E_y, white);
+    gdImageLine(img, E_x, E_y, D_x, D_y, white);
+    gdImageLine(img, D_x, D_y, A_x, A_y, white);
+}</pre>
+<p></p>
+<h4><img alt="" height="274" src="/images/螢幕擷取畫面 (204).png" width="487"/></h4>
+<img caption="false" height="275" src="/images/螢幕擷取畫面 (206).png" width="490"/>
+<img alt="" height="277" src="/images/螢幕擷取畫面 (205).png" width="492"/>
+<img alt="" height="326" src="/images/roc flag w15.png" width="490"/>
 <h1>experience</h1>
 <p><span>心得:</span><br/><span>這些課程學習到的東西對於我來說相當新鮮，但正因為這些內容實在是太新鮮了，以至於我在學習的過程中常常只懂得依樣畫葫蘆，但即使如此，我還是嘗試好多次，才有了以上的成果，但我希望上課內容可以先和學員普及其中運作的原理，預留較多的時間才能真正學習好內容。</span></p>
 <h1>Brython</h1>
