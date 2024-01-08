@@ -3,7 +3,7 @@
 <h1>First</h1>
 <p><br/><br/>About</p>
 <p><a href="https://github.com/mdecycu/cmsite"> https://github.com/kim41223114/cp2023</a> (倉儲)<br/><br/></p>
-<h1>W3</h1>
+<h1>W1~W3</h1>
 <pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">以下為開啟筆記編輯網站之程式:
 # cmsite
 cmsimde template uses mdecycu/cmsimde as submodule
@@ -16,6 +16,22 @@ for cmsimde_site: cmsimde is as directory not submodule
 
 for cmsimde: pip install flask flask_cors bs4 lxml pelican markdown gevent</pre>
 <h4><img alt="" height="302" src="/images/螢幕擷取畫面 (195).png" width="537"/></h4>
+<h1>W5</h1>
+<pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">三角函數波形圖程式:{ pkgs }: {
+    deps = [
+      pkgs.libev
+      pkgs.gnuplot
+      pkgs.ncurses.dev
+      pkgs.gd
+    ];
+  env = {
+    PYTHON_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+      pkgs.libev
+    ];
+  };
+}</pre>
+<h4><img alt="" height="203" src="/images/gnuplot_ex1.png" width="406"/></h4>
+<h4><img alt="" height="224" src="/images/螢幕擷取畫面 (196).png" width="398"/></h4>
 <h1>w6</h1>
 <p></p>
 <pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
@@ -146,21 +162,8 @@ int main() {
 
     return 0;
 }</pre>
-<pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">三角函數波形圖程式:{ pkgs }: {
-    deps = [
-      pkgs.libev
-      pkgs.gnuplot
-      pkgs.ncurses.dev
-      pkgs.gd
-    ];
-  env = {
-    PYTHON_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
-      pkgs.libev
-    ];
-  };
-}</pre>
-<p><br/><br/><img alt="" height="203" src="/images/gnuplot_ex1.png" width="406"/></p>
-<p><img alt="" height="224" src="/images/螢幕擷取畫面 (196).png" width="398"/></p>
+<p><br/><br/><br/></p>
+<p></p>
 <h1>W9(嘗試遠端連結S1511)</h1>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">以下是使用遠端IPV6的連結練習
 Microsoft Windows [版本 10.0.22621.2428]
@@ -392,7 +395,7 @@ Connection closed
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">經過我不懈的努力，github的倉儲才被我叫出來</pre>
 <p><img alt="" height="262" src="/images/螢幕擷取畫面 (91).png" width="466"/></p>
 <p></p>
-<h1>學期心得</h1>
+<h1>experience</h1>
 <p>心得:<br/> 這些課程學習到的東西對於我來說相當新鮮，但正因為這些內容實在是太新鮮了，以至於我在學習的過程中常常只懂得依樣畫葫蘆，但即使如此，我還是嘗試好多次，才有了以上的成果，但我希望上課內容可以先和學員普及其中運作的原理，預留較多的時間才能真正學習好內容。</p>
 <h1>putty使用</h1>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">步驟1:使用puttygen.exe定位主機位置並獲得key(點擊Generate開始定位)

@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='First.html'>First</a><li><a href='W3.html'>W3</a><li><a href='w6.html'>w6</a><li><a href='W9(嘗試遠端連結S1511).html'>W9(嘗試遠端連結S1511)</a><li><a href='W11(使用瀏覽器開啟國旗檔).html'>W11(使用瀏覽器開啟國旗檔)</a><li><a href='W13(開啟github倉儲).html'>W13(開啟github倉儲)</a><li><a href='experience.html'>experience</a><li><a href='putty使用.html'>putty使用</a><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='First.html'>First</a><li><a href='W1~W3(登入並設定筆記作業網站之密碼).html'>W1~W3(登入並設定筆記作業網站之密碼)</a><li><a href='W5(初次嘗試gd繪圖，以三角函數波型圖為例).html'>W5(初次嘗試gd繪圖，以三角函數波型圖為例)</a><li class='has-children'><a href='w6(以gd繪圖嘗試各國之國旗繪製).html'>w6(以gd繪圖嘗試各國之國旗繪製)</a><ul class='dropdown'><li><a href='中華民國國旗.html'>中華民國國旗</a><li><a href='日本國旗.html'>日本國旗</a><li><a href='美國國旗.html'>美國國旗</a></li></ul><li><a href='W9(嘗試遠端連結S1511).html'>W9(嘗試遠端連結S1511)</a><li><a href='W11(使用瀏覽器開啟國旗檔).html'>W11(使用瀏覽器開啟國旗檔)</a><li><a href='W13(開啟github倉儲).html'>W13(開啟github倉儲)</a><li><a href='putty使用.html'>putty使用</a><li><a href='experience.html'>experience</a><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -142,20 +142,23 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">First << <a href='First.html'>Previous</a> <a href='w6.html'>Next</a> >> w6<br /><h1>W3</h1>
-<pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">以下為開啟筆記編輯網站之程式:
-# cmsite
-cmsimde template uses mdecycu/cmsimde as submodule
-
-On Replit:
-
-for cmsite: git submodule update --init --recursive 
-
-for cmsimde_site: cmsimde is as directory not submodule
-
-for cmsimde: pip install flask flask_cors bs4 lxml pelican markdown gevent</pre>
-<h4><img alt="" height="302" src="./../images/螢幕擷取畫面 (195).png" width="537"/></h4>
-<br />First << <a href='First.html'>Previous</a> <a href='w6.html'>Next</a> >> w6</div>
+    <div id="tipue_search_content">W1~W3(登入並設定筆記作業網站之密碼) << <a href='W1~W3(登入並設定筆記作業網站之密碼).html'>Previous</a> <a href='w6(以gd繪圖嘗試各國之國旗繪製).html'>Next</a> >> w6(以gd繪圖嘗試各國之國旗繪製)<br /><h1>W5(初次嘗試gd繪圖，以三角函數波型圖為例)</h1>
+<pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">三角函數波形圖程式:{ pkgs }: {
+    deps = [
+      pkgs.libev
+      pkgs.gnuplot
+      pkgs.ncurses.dev
+      pkgs.gd
+    ];
+  env = {
+    PYTHON_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+      pkgs.libev
+    ];
+  };
+}</pre>
+<h4><img alt="" height="203" src="./../images/gnuplot_ex1.png" width="406"/></h4>
+<h4><img alt="" height="224" src="./../images/螢幕擷取畫面 (196).png" width="398"/></h4>
+<br />W1~W3(登入並設定筆記作業網站之密碼) << <a href='W1~W3(登入並設定筆記作業網站之密碼).html'>Previous</a> <a href='w6(以gd繪圖嘗試各國之國旗繪製).html'>Next</a> >> w6(以gd繪圖嘗試各國之國旗繪製)</div>
         
     <!-- footer -->
       <div class="container">
